@@ -1,25 +1,32 @@
 body {
-    border: solid black 1px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: solid rgb(150, 150, 150) 1px;
+    background-color: rgb(233, 233, 233);
 }
 
 navbar {
+    font-family: 'Comfortaa', cursive;
+    padding: 10px;
+    border: rgba(150, 150, 150) 1px;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
     display: flex;
+    background-color: white;
+    justify-content: space-between;
 }
 
 name {
-    font-family: "Lucida Console", "Monaco", monospace;
+    margin-left: 10px;
     font-size: 25px;
-    margin-left: 3%;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    font-weight: bold;
 }
 
 right {
-    font-size: 18px;
-    margin-left: 72%;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    display: flex;
+    font-weight: bold;
+    font-size: 12px;
 }
 
 username {
@@ -27,14 +34,20 @@ username {
 }
 
 signout {
+    padding: 10px;
     color:rgb(117, 151, 196)
 }
 
-stories{
-    margin: 125px;
+stories {
+    display: flex;
+    justify-content: left;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 550px;
+    margin: 25px; 
+    background-color: rgb(255, 255, 255);
 }
 
-img {
+stories img {
     width: 50px;
     height: 50px;
     border: lightgray solid 3px;
@@ -55,17 +68,164 @@ p {
 }
 
 photo {
-    margin: 10px;
-    margin-left: 125px;
-    padding: 10px;
-    border: solid black 1px;
+    margin: 25px;
+    background-color: white;
+    width: 550px;
+    border: solid rgba(150, 150, 150, 0.5) 1px;
     display: block;
 }
 
 h3 {
+    margin: 20px;
     display: inline-block;
 }
 
-#dots {
-    margin-left: 50%;
+photo img {
+    width: 550px;
+}
+
+i {
+    font-size: 20px;
+    margin: 5px;
+}
+
+.fa-bookmark {
+    margin-left: 77%;
+}
+
+.likes {
+    margin: 10px;
+    font-weight: bold;
+}
+
+p.comment {
+    margin-left: 10px;
+    display: inline;
+}
+
+#more {
+    color:rgb(117, 151, 196);
+}
+
+p.comment2 {
+    margin: 10px;
+}
+
+p.comment3 {
+    margin: 10px;
+}
+
+p.time {
+    margin: 10px;
+    color: rgb(156, 156, 156);
+}
+
+commentbar {
+    padding: 5px;
+    display: flex;
+    border-top: solid rgba(150, 150, 150, 0.5) 1px;
+}
+
+.fa-smile {
+    margin: 10px;
+}
+
+commentbar p {
+    margin-top: 10px;
+    margin-left: 58%;
+    color:rgb(117, 151, 196);
+}
+
+sidebar {
+    position: fixed;
+    left: 600px;
+    margin-top: 25px;
+    display: block;
+}
+
+sidebar img {
+    width: 75px;
+    height: 75px;
+    border: lightgray solid 3px;
+    border-radius: 50%;
+}
+
+#sugg {
+    font-size: 25px;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+storiessidebar {
+    display: flex;
+    margin-top: 50px;
+}
+
+profile {
+    font-family: 'Comfortaa', cursive;
+    margin-left: 10px;
+    display: flex;
+}
+
+profiles {
+    margin: 5px;
+    display: flex;
+}
+
+#suggestions {
+    margin: 15px;
+    color: rgb(145, 145, 145);
+    font-size: 20px;
+}
+
+suggestionsprof {
+    display: inline-grid;
+    margin: 10px;
+}
+
+suggestionsprof img {
+    border: 0;
+    width: 40px;
+    height: 40px;
+}
+
+suggestionsprof p {
+    display: inline-block;
+}
+
+follow {
+    margin-left: auto;
+    margin: 10px;
+    color:rgb(117, 151, 196);
+}
+
+top {
+    margin: 10px;
+    display: inline-grid;
+}
+
+.suggestions {
+    color: gray;
+}
+
+storyphoto {
+    display: block;
+}
+
+topofphoto {
+    font-family: 'Comfortaa', cursive;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+    sidebar {
+        display: none;
+    }
+    stories {
+        margin: 15px;
+    }
+    photo {
+        margin: 15px;
+    }
 }

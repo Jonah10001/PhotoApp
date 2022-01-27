@@ -1,0 +1,19 @@
+<sidebar>
+    <profile>
+    <img src="{{ user.get('profile_url') }}" alt="profile photo for {{ user.get('username') }}">
+    <p id="sugg"> {{ user.get('username') }} </p>
+    </profile>
+    <p id='suggestions'> Suggestions for you </p>
+    <suggestionsprof>
+    {% for item in suggestions %}
+    <profiles>
+        <img src="{{ item.get('image_url') }}" alt="profile photo for {{ item.get('user') }}">
+        <top>
+            <p> <strong> {{item.get('username')}} </strong> </p>
+            <p class="suggestions"> Suggested for you </p>
+        </top> 
+        <follow> follow </follow>
+    </profiles>
+    {% endfor %}
+    </suggestionsprof>
+</sidebar>

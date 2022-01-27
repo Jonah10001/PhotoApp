@@ -1,0 +1,8 @@
+<stories>
+    {% for item in stories %}
+    <person>
+        <img src="{{ item.get('user').get('profile_url') }}" alt="story from {{item.get('user').get('username')}}">
+        <p> {{ item.get('user').get('username') }} </p>
+    </person>
+    {% endfor %}
+</stories>

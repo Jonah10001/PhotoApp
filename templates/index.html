@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Photo App </title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    {% include 'includes/navbar.html' %}
+<storiessidebar>
+    <storyphoto>
+    {% include 'includes/stories.html' %}
+    {% include 'includes/cards.html' %}
+    </storyphoto>
+    {% include 'includes/suggestions.html' %}
+    </storiessidebar>
+</body>
+
+<!-- I would add a feature for when a user goes to post an image. There would be a
+box right above the post buttom that allows for a user to optionally include alttext.
+Then that text would be assigned with the photo for people using screenreaders. -->

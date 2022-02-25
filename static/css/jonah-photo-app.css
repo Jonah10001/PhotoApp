@@ -1,0 +1,245 @@
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: solid rgb(150, 150, 150) 1px;
+    background-color: rgb(233, 233, 233);
+}
+
+navbar {
+    font-family: 'Comfortaa', cursive;
+    padding: 10px;
+    border: rgba(150, 150, 150) 1px;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+}
+
+name {
+    margin-left: 10px;
+    font-size: 25px;
+}
+
+right {
+    display: flex;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+username {
+    padding: 10px;
+}
+
+signout {
+    padding: 10px;
+    color:rgb(76, 109, 151);
+}
+
+stories {
+    display: inline;
+    justify-content: left;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 550px;
+    margin: 25px; 
+    background-color: rgb(255, 255, 255);
+}
+
+stories img {
+    width: 50px;
+    height: 50px;
+    border: lightgray solid 3px;
+    border-radius: 50%;
+}
+
+person{
+    font-size: 11px;
+    color: rgb(90, 90, 90);
+    display: inline-block;
+    margin: 8px;
+    text-align: center;
+}
+
+p {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+photo {
+    margin: 25px;
+    background-color: white;
+    width: 550px;
+    border: solid rgba(150, 150, 150, 0.5) 1px;
+    display: block;
+}
+
+h3 {
+    margin: 20px;
+    display: inline-block;
+}
+
+photo img {
+    width: 550px;
+}
+
+i {
+    font-size: 20px;
+    margin: 5px;
+}
+
+.fa-bookmark {
+    margin-left: 77%;
+}
+
+.likes {
+    margin: 10px;
+    font-weight: bold;
+}
+
+.num_comments {
+    margin: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color:rgb(76, 109, 151);
+}
+
+.title {
+    margin: 10px; 
+    display: inline-block;
+}
+
+#comment_user {
+    margin-left: 10px;
+}
+
+p.comment {
+    width: 500px;
+    display: inline-block;
+    margin: 10px;
+}
+
+#more {
+    color:rgb(76, 109, 151);
+}
+
+p.time {
+    margin: 10px;
+    color: rgb(90, 90, 90);
+}
+
+commentbar {
+    padding: 5px;
+    display: flex;
+    border-top: solid rgba(150, 150, 150, 0.5) 1px;
+}
+
+.fa-smile {
+    margin: 10px;
+}
+
+commentbar p {
+    margin-top: 10px;
+    margin-left: 58%;
+    color:rgb(117, 151, 196);
+}
+
+sidebar {
+    position: fixed;
+    left: 600px;
+    margin-top: 25px;
+    display: block;
+}
+
+sidebar img {
+    width: 75px;
+    height: 75px;
+    border: lightgray solid 3px;
+    border-radius: 50%;
+}
+
+#sugg {
+    font-size: 25px;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+storiessidebar {
+    display: flex;
+    margin-top: 50px;
+}
+
+profile {
+    font-family: 'Comfortaa', cursive;
+    margin-left: 10px;
+    display: flex;
+}
+
+profiles {
+    margin: 0px;
+    display: flex;
+}
+
+#suggestions {
+    margin: 10px;
+    margin-bottom: 0px;
+    color: rgb(90, 90, 90);
+    font-size: 20px;
+}
+
+suggestionsprof {
+    display: inline-grid;
+    margin: 10px;
+}
+
+suggestionsprof img {
+    border: 0;
+    width: 40px;
+    height: 40px;
+}
+
+suggestionsprof p {
+    display: inline-block;
+}
+
+follow {
+    margin-left: auto;
+    margin: 10px;
+    color:rgb(76, 109, 151);
+}
+
+top {
+    margin: 10px;
+    display: inline-grid;
+}
+
+.suggestions {
+    color: rgb(90, 90, 90);
+}
+
+storyphoto {
+    display: block;
+}
+
+topofphoto {
+    font-family: 'Comfortaa', cursive;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fas.fa-heart {
+    color:red;
+}
+
+@media only screen and (max-width: 600px) {
+    sidebar {
+        display: none;
+    }
+    stories {
+        margin: 15px;
+    }
+    photo {
+        margin: 15px;
+    }
+}

@@ -3,6 +3,7 @@ from flask_restful import Resource
 from models import Following, User, db
 from sqlalchemy import and_
 import json
+import flask_jwt_extended
 
 from tests.utils import get_authorized_user_ids
 
@@ -13,10 +14,12 @@ class FollowingListEndpoint(Resource):
     def __init__(self, current_user):
         self.current_user = current_user
     
+    @flask_jwt_extended.jwt_required()
     def get(self):
         following = Following.query.filter_by(user_id = self.current_user.id)
         return Response(json.dumps([follower.to_dict_following() for follower in following]), mimetype="application/json", status=200)
 
+    @flask_jwt_extended.jwt_required()
     def post(self):
         body = request.get_json()
         id = body.get('user_id')
@@ -46,6 +49,7 @@ class FollowingDetailEndpoint(Resource):
     def __init__(self, current_user):
         self.current_user = current_user
     
+    @flask_jwt_extended.jwt_required()
     def delete(self, id):
         try:
             id = int(id)
@@ -73,11 +77,11 @@ def initialize_routes(api):
         FollowingListEndpoint, 
         '/api/following', 
         '/api/following/', 
-        resource_class_kwargs={'current_user': api.app.current_user}
+        resource_class_kwargs={'current_user': flask_jwt_extended.current_user}
     )
     api.add_resource(
         FollowingDetailEndpoint, 
         '/api/following/<id>', 
         '/api/following/<id>/', 
-        resource_class_kwargs={'current_user': api.app.current_user}
+        resource_class_kwargs={'current_user': flask_jwt_extended.current_user}
     )

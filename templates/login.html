@@ -47,14 +47,14 @@
     </style>
 </head>
 <body>
-    <!-- Nav Bar still rendered via server-side template -->
-    {% include 'includes/navbar.html'  %}
+    {% include 'includes/navbar.html' %}
     <form method="POST" action="/login">
         {% if message %}
             <div class="error">{{ message }}</div>
         {% endif %}
-        
-        YOUR FORM HERE
+        <input name="username" type="text" placeholder="Username"/>
+        <input name="password" type="password" placeholder="password"/>
+        <button type="submit"> Login </button>
     </form> 
 </body>
 </html>

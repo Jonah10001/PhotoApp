@@ -22,7 +22,7 @@ app = Flask(__name__)
 
 app.config["JWT_SECRET_KEY"] = os.environ.get('JWT_SECRET')
 
-app.config["JWT_ACCESS_TOKEN_EXPIRES"] = datetime.timedelta(seconds = 20)
+app.config["JWT_ACCESS_TOKEN_EXPIRES"] = datetime.timedelta(days = 30)
 app.config["JWT_TOKEN_LOCATION"] = ["headers", "cookies", "json", "query_string"]
 app.config["JWT_COOKIE_SECURE"] = False
 jwt = flask_jwt_extended.JWTManager(app)
